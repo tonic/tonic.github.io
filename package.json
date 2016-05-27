@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "description": "Tonic is a digital agency that's good for business.",
   "author": "Tonic <developer@hellotonic.com>",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "require-dir": "^0.3.0"
+  }
 }
