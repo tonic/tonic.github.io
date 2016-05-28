@@ -1,0 +1,36 @@
+{
+  "root": {
+    "src": "./src",
+    "dest": "./dist"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "server": {
+        "baseDir": "dist"
+      }
+    },
+
+    "static": {
+      "src": "static",
+      "extensions": ["html", "ico"]
+    },
+
+    "css": {
+      "src": "styles",
+      "dest": "styles",
+      "sass": {
+        "includePaths": [
+          "bower_components/bootstrap-sass/assets/stylesheets"
+        ]
+      },
+      "extensions": ["scss", "css"]
+    },
+
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    }
+  }
+}

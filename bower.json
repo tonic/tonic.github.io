@@ -1,0 +1,15 @@
+{
+  "name": "tonic",
+  "description": "Tonic is a digital agency that's good for business.",
+  "authors": [
+    "Tonic <developer@hellotonic.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
