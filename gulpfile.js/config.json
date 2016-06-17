@@ -19,6 +19,9 @@
     "css": {
       "src": "styles",
       "dest": "styles",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
       "sass": {
         "includePaths": [
           "bower_components/bootstrap-sass/assets/stylesheets"

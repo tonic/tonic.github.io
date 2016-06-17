@@ -1,5 +1,6 @@
 var config = require('../config');
 var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer')
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
@@ -15,6 +16,7 @@ var cssTask = function () {
     .pipe(sourcemaps.init())
     .pipe(sass(config.tasks.css.sass))
     .on('error', sass.logError)
+    .pipe(autoprefixer(config.tasks.css.autoprefixer))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream())
