@@ -18,5 +18,10 @@
     "gulp-watch": "^4.3.6",
     "open": "0.0.5",
     "require-dir": "^0.3.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "gulp",
+    "deploy": "gulp deploy"
   }
 }
