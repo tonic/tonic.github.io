@@ -6,6 +6,7 @@
   "private": true,
   "homepage": "https://tonic.github.io/",
   "devDependencies": {
+    "bower": "^1.7.9",
     "browser-sync": "^2.12.10",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
