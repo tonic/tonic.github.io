@@ -10,16 +10,17 @@ var settings = {
   url: package.homepage,
   src: path.join(config.root.dest, '/**/*'),
   ghPages: {
+    branch: 'master',
     cacheDir: path.join(os.tmpdir(), package.name)
   }
 }
 
-var deployTask = function() {
+var deployTask = function () {
   return gulp.src(settings.src)
     .pipe(ghPages(settings.ghPages))
-    .on('end', function(){
-      open(settings.url)
-    })
+    .on('end', function () {
+      open(settings.url);
+    });
 }
 
 gulp.task('deploy', ['production'], deployTask);
