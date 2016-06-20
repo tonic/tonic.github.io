@@ -4,7 +4,7 @@
   "description": "Tonic is a digital agency that's good for business.",
   "author": "Tonic <developer@hellotonic.com>",
   "private": true,
-  "homepage": "https://tonic.github.io/hellotonic.com",
+  "homepage": "https://tonic.github.io/",
   "devDependencies": {
     "browser-sync": "^2.12.10",
     "del": "^2.2.0",
