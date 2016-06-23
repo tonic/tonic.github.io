@@ -1,4 +1,10 @@
-// Bootstrap Variables
-$font-family-sans-serif: "adelle-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// Global Variables & Bootstrap Overrides
 
+// =Colors
 $mulberry: #830065;
+
+// =Typography
+$font-family-sans-serif: "adelle-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+.wf-loading { visibility: hidden; } // Fix FOUT w/ Typekit
+
+
