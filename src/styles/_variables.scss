@@ -4,7 +4,10 @@
 $mulberry: #830065;
 
 // =Typography
-$font-family-sans-serif: "adelle-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:  "adelle-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base:          20px !default;
+$line-height-base:        1.7 !default; // 20/14
+$headings-line-height:    1.3 !default;
 .wf-loading { visibility: hidden; } // Fix FOUT w/ Typekit
 
 

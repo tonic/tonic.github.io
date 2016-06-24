@@ -24,6 +24,11 @@
     font-size: 68px;
     width: 800px;
     text-shadow: 0 0 20px rgba(255,255,255,.22);
-    color: $mulberry;
+    color: #222;
+
+    span {
+      color: $mulberry;
+      font-weight: bold;
+    }
   }
 }//.hero
