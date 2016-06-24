@@ -1,17 +1,21 @@
 var config = require('../config');
 var gulp = require('gulp');
 var gulpSequence = require('gulp-sequence');
+var getEnabledTasks = require('../lib/getEnabledTasks');
 
 var productionTask = function (cb) {
-  global.production = true
+  global.production = true;
+
+  var tasks = getEnabledTasks('production');
 
   gulpSequence(
     'clean',
-    'images',
-    'css',
+    tasks.assetTasks,
+    tasks.codeTasks,
+    config.tasks.production.rev ? 'rev' : false,
     'static',
     cb
-  )
+  );
 }
 
 gulp.task('production', productionTask);
