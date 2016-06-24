@@ -13,27 +13,66 @@
 
     "static": {
       "src": "static",
-      "extensions": ["html", "ico"]
+      "extensions": [
+        "html",
+        "ico"
+      ]
     },
 
     "css": {
       "src": "styles",
       "dest": "styles",
       "autoprefixer": {
-        "browsers": ["last 3 version"]
+        "browsers": [
+          "last 3 version"
+        ]
       },
       "sass": {
         "includePaths": [
           "bower_components/bootstrap-sass/assets/stylesheets"
         ]
       },
-      "extensions": ["scss", "css"]
+      "extensions": [
+        "css",
+        "scss"
+      ]
+    },
+
+    "js": {
+      "src": "scripts",
+      "dest": "scripts",
+      "entries": {
+        "app": [
+          "./app.js"
+        ]
+      },
+      "extensions": [
+        "js",
+        "json"
+      ],
+      "babel": {
+        "presets": [
+          "es2015",
+          "stage-1"
+        ],
+        "plugins": []
+      },
+      "extractSharedJs": false
     },
 
     "images": {
       "src": "images",
       "dest": "images",
-      "extensions": ["jpg", "png", "svg", "gif"]
+      "extensions": [
+        "gif",
+        "jpg",
+        "png",
+        "svg"
+      ]
+    },
+
+    "production": {
+      "rev": false
     }
   }
 }
