@@ -29,7 +29,7 @@
       },
       "sass": {
         "includePaths": [
-          "bower_components/bootstrap-sass/assets/stylesheets"
+          "node_modules/bootstrap-sass/assets/stylesheets"
         ]
       },
       "extensions": [
