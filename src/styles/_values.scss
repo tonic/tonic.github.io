@@ -1,4 +1,30 @@
 .values {
   background: $white;
-  height: 420px;
+  padding: 80px 30px 70px 30px;
+
+  .flex-wrap {
+    margin: 0 30px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .value {
+    flex: 1;
+    padding: 0 30px 20px 40px;
+    background: $white;
+    color: $gray;
+    font-size: 18px;
+
+    h3 {
+      color: $gray-dark;
+      font-size: 28px;
+      padding-left: 28px;
+      background: url(/images/slash.png) 0 0 no-repeat;
+      background-size: 25px 42px;
+
+      strong {
+        color: $mulberry;
+      }
+    }
+  }
 }//.values

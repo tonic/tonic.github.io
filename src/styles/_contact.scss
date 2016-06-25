@@ -1,6 +1,6 @@
 .contact {
   background: $black;
-  height: 690px;
+  height: 720px;
   overflow: hidden;
 
   .address-holder {
@@ -38,8 +38,11 @@
   }//.address-holder
 
   .map {
+    overflow: hidden;
+
     #map {
-      height: 715px;
+      height: 745px;
+      margin-right: -2px; //fix rounding error white border
     }
   }//.map
 
@@ -47,6 +50,7 @@
     padding: 15px 25px 15px 45px;
 
     h4 {
+      margin-top: 45px;
       color: $gray-light;
       font-size: 28px;
       line-height: 1.6;
@@ -85,6 +89,14 @@
           outline: none;
         }
       }
+
+      .btn {
+        transition: all .5s;
+      }
+    }//.control
+
+    .btn.btn-hollow {
+      @include btn-hollow($gray-light,$gray-light,$gray-bg,$mulberry,$white);
     }
   }//.form-holder
 }//.contact
