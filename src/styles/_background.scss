@@ -35,9 +35,11 @@
     font-size: 20px;
     height: 240px;
     color: $gray-text;
-    padding: 55px 70px 75px 70px;
-    text-align: center;
+    padding: 55px 60px 75px 75px;
 
+    h3 {
+      color: $white;
+    }
 
     address {
       position: absolute;
@@ -47,11 +49,6 @@
       margin: 0;
       left: 24px;
       bottom: 15px;
-    }
-
-    h3 {
-      color: $white;
-      text-align: center;
     }
   }
 }//.intro

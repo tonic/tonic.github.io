@@ -1,7 +1,47 @@
 .contact {
   background: $black;
-  height: 585px;
+  height: 690px;
   overflow: hidden;
+
+  .address-holder {
+    padding: 70px 30px 50px 50px;
+    color: $gray-light;
+
+    .copyright {
+      padding-top: 32px;
+      border-top: 1px solid $gray-bg;
+      color: lighten($gray-bg,15%);
+      font-size: 17px;
+    }
+
+    p {
+      padding: 25px 0 15px 0;
+    }
+
+    em {
+      display: block;
+      font-size: 17px;
+      color: $gray-light;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $brand-info;
+      }
+    }
+
+    address {
+      color: $gray-text;
+    }
+  }//.address-holder
+
+  .map {
+    #map {
+      height: 715px;
+    }
+  }//.map
 
   .form-holder {
     padding: 15px 25px 15px 45px;
@@ -38,6 +78,7 @@
         padding: 4px 10px;
         resize: none;
         color: $gray-text;
+        transition: all .5s;
 
         &:focus {
           border-color: lighten($gray-bg,15%);
@@ -45,43 +86,5 @@
         }
       }
     }
-  }
-
-  .address-holder {
-    padding: 70px 30px 50px 50px;
-    color: $gray-light;
-
-    .copyright {
-      padding-top: 32px;
-      border-top: 1px solid $gray-bg;
-      color: lighten($gray-bg,15%);
-      font-size: 17px;
-    }
-
-    p {
-      padding: 25px 0 15px 0;
-    }
-
-    em {
-      display: block;
-      font-size: 17px;
-      color: $gray-light;
-    }
-
-    a {
-      color: $white;
-
-      &:hover {
-        color: $brand-info;
-      }
-    }
-
-    address {
-      color: $gray-text;
-    }
-  }
-
-  #map {
-    height: 585px;
-  }
+  }//.form-holder
 }//.contact

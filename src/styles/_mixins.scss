@@ -1,0 +1,23 @@
+// Global Mixins & Utilities
+
+@mixin btn-hollow($border-color: $gray, $text-color: $gray, $hover-text-color: lighten($text-color,32%)) {
+  background-color:       transparent;
+  border-color:           $border-color;
+  color:                  $text-color;
+
+  &:hover,
+  &:focus {
+    outline:              none;
+    background-color:     transparent;
+    border-color:         lighten($border-color,6%);
+    color:                $hover-text-color;
+  }
+}
+
+.btn.btn-hollow             { @include btn-hollow(); }
+.btn.btn-success.btn-hollow { @include btn-hollow($brand-success,$brand-success,$white); }
+
+// =Fixes
+.wf-loading {
+  visibility: hidden;
+}// Typekit Flash of Unstyled Text
