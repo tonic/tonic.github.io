@@ -1,0 +1,86 @@
+.contact {
+  background: $black;
+  height: 585px;
+
+  .form-holder {
+    padding: 15px 25px 15px 45px;
+
+    h4 {
+      color: $gray-light;
+      font-size: 28px;
+      line-height: 1.6;
+
+      span {
+        font-size: 22px;
+        display: block;
+        color: $gray-text;
+      }
+    }
+
+    .control {
+      padding-bottom: 10px;
+
+      label {
+        display: block;
+        color: $gray;
+        font-size: 17px;
+        font-weight: normal;
+      }
+
+      input,
+      textarea {
+        width: 80%;
+        font-size: 20px;
+        font-family: monospace;
+        background: darken($gray-bg,5%);
+        border: 3px solid $gray-bg;
+        padding: 4px 10px;
+        resize: none;
+        color: $gray-text;
+
+        &:focus {
+          border-color: lighten($gray-bg,15%);
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .address-holder {
+    padding: 70px 30px 50px 50px;
+    color: $gray-light;
+
+    .copyright {
+      padding-top: 32px;
+      border-top: 1px solid $gray-bg;
+      color: lighten($gray-bg,15%);
+      font-size: 17px;
+    }
+
+    p {
+      padding: 25px 0 15px 0;
+    }
+
+    em {
+      display: block;
+      font-size: 17px;
+      color: $gray-light;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $brand-info;
+      }
+    }
+
+    address {
+      color: $gray-text;
+    }
+  }
+
+  #map {
+    height: 585px;
+  }
+}//.contact

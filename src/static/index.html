@@ -20,6 +20,9 @@
   <!-- Typography -->
   <script src="https://use.typekit.net/ufk4bjs.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <!-- Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
 </head>
 
 <body>
@@ -45,7 +48,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-sm-8 col-sm-offset-2 intro-text">
+        <div class="col-sm-8 col-sm-offset-1 intro-text">
           <h2>We provide <strong>strategy</strong>, <strong>design</strong>, and <strong>development</strong> for inspired brands.</h2>
           <p>Everything we do centers around creating purposeful work that makes an impact. We take on work that makes a tangible difference in our clients’ lives and their companies’ futures.</p>
         </div><!-- / .col -->
@@ -55,12 +58,94 @@
   </section><!-- / .intro -->
 
   <section class="background">
-    <div class="container">
+    <div class="container-fluid">
+
+      <div class="row"></div>
+        <div class="col-sm-8 bg-hold">
+          <div class="bg bg-view"></div>
+        </div><!-- / .col -->
+        <div class="col-sm-4 bg-hold">
+          <div class="bg bg-logo"></div>
+        </div><!-- / .col -->
+      </div><!-- / .row -->
+
+      <div class="row alt">
+        <div class="col-sm-2 bg-hold">
+          <div class="bg bg-rested"></div>
+        </div><!-- / .col -->
+        <div class="col-sm-5 about">
+
+            <h3>Who is Tonic?</h3>
+            <p>We’re a nimble team comprised of experienced, senior talent. We add the support that organizations need to tackle complex digital issues.</p>
+
+            <address>Photos at Galvanize, Platte</address>
+
+        </div><!-- / .col -->
+        <div class="col-sm-5 bg-hold">
+          <div class="bg bg-chair"></div>
+        </div><!-- / .col -->
+      </div><!-- / .row -->
 
     </div><!-- / .container -->
   </section><!-- / .background -->
 
+  <section class="contact">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-3 address-holder">
+          <img src="/images/logo.png" width="62" height="62"/>
+
+          <p>
+            <em>Email</em>
+            <a href="mailto:hello@hellotonic.com">hello@hellotonic.com</a>
+          </p>
+          <address>
+            <em>Office</em>
+            Tonic, Inc.<br/>
+            1644 Platte St, 4th Floor<br/>
+            Denver, Colorado<br/>
+            80202
+          </address>
+
+          <div class="copyright">
+            &copy; Copyright 2016 Tonic<br/>
+            Thanks for stopping by :-)
+          </div>
+        </div><!-- / .col -->
+        <div class="col-sm-5 map">
+          <div id="map"></div>
+        </div><!-- / .col -->
+        <div class="col-sm-4 form-holder">
+          <h4>
+            Thirsty?
+            <span>We'd love to chat.</span>
+          </h4>
+          <form action="#">
+            <div class="control">
+              <label for="form_name">Your Name</label>
+              <input type="text" name="name" id="form_name"/>
+            </div>
+            <div class="control">
+              <label for="form_email">Your Email</label>
+              <input type="text" name="email" id="form_email"/>
+            </div>
+            <div class="control">
+              <label for="form_phone">Your Phone #</label>
+              <input type="text" name="email" id="form_phone"/>
+            </div>
+            <div class="control">
+              <label for="form_comments">What are you looking to do?</label>
+              <textarea type="text" name="comments" rows="3" id="form_comments"></textarea>
+            </div>
+          </form>
+        </div><!-- / .col -->
+
+      </div><!-- / .row -->
+    </div><!-- / .container-fluid -->
+  </section><!-- / .contact -->
+
 <!-- Scripts -->
-<!-- <script src="/scripts/app.js"></script> -->
+<script src="/scripts/app.js"></script>
 </body>
 </html>
