@@ -25,6 +25,12 @@ module.exports = function (env) {
     module: {
       loaders: [
         {
+          test: /\.json$/,
+          loader: 'json',
+          exclude: /node_modules/,
+          query: config.tasks.js.babel
+        },
+        {
           test: /\.js$/,
           loader: 'babel-loader',
           exclude: /node_modules/,
