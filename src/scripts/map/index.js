@@ -2,8 +2,8 @@ import styles from './styles';
 
 const initMap = () => {
   const mapOptions = {
-    zoom: 15,
-    center: new google.maps.LatLng(39.7577740, -105.0071320),
+    zoom: 14,
+    center: new google.maps.LatLng(39.751263, -104.999771),
     scrollwheel: false,
     navigationControl: true,
     mapTypeControl: false,

@@ -15,6 +15,21 @@
     ]
   },
   {
+    "elementType": "geometry.fill",
+    "featureType": "all",
+    "stylers": [
+      {
+        "saturation": 36
+      },
+      {
+        "color": "#000000"
+      },
+      {
+        "lightness": 22
+      }
+    ]
+  },
+  {
     "elementType": "labels.text.stroke",
     "featureType": "all",
     "stylers": [
@@ -285,3 +300,4 @@
     ]
   }
 ]
+

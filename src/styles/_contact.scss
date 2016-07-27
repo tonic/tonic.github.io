@@ -41,7 +41,7 @@
     overflow: hidden;
 
     #map {
-      height: 745px;
+      height: 775px;
       margin-right: -2px; //fix rounding error white border
     }
   }//.map
@@ -76,7 +76,6 @@
       textarea {
         width: 80%;
         font-size: 20px;
-        font-family: monospace;
         background: darken($gray-bg,5%);
         border: 3px solid $gray-bg;
         padding: 4px 10px;

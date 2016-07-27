@@ -8,6 +8,20 @@
     flex-direction: row;
   }
 
+  .value-intro {
+    padding: 0 180px 5px 70px;
+
+    h2 {
+      background: url(/images/triple-slash.png) 0 0 no-repeat;
+      background-size: 39px 50px;
+      padding-left: 45px;
+
+      strong {
+        color: $mulberry;
+      }
+    }
+  }
+
   .value {
     flex: 1;
     padding: 0 30px 20px 40px;
