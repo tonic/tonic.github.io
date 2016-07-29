@@ -1,7 +1,5 @@
 .contact {
   background: $black;
-  height: 720px;
-  overflow: hidden;
 
   .address-holder {
     padding: 70px 30px 50px 50px;
@@ -39,6 +37,7 @@
 
   .map {
     overflow: hidden;
+    height: 720px;
 
     #map {
       height: 775px;
@@ -47,7 +46,7 @@
   }//.map
 
   .form-holder {
-    padding: 15px 25px 15px 45px;
+    padding: 15px 25px 45px 45px;
 
     h4 {
       margin-top: 45px;
@@ -99,3 +98,43 @@
     }
   }//.form-holder
 }//.contact
+
+//769px to 992px
+@media (max-width: $screen-md) {
+  .map {
+    display: none;
+  }
+}
+
+//481px to 768px
+@media (max-width: $screen-sm) {
+  .map {
+    display: none;
+  }
+}
+
+//480px and Less
+@media (max-width: $screen-xs) {
+  .contact {
+    .address-holder {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+
+    .form-holder {
+      width: 100%;
+      h4 {
+        margin-top: 0;
+      }
+    }
+
+    .copyright {
+      display: none;
+    }
+
+    .map {
+      display: none;
+    }
+  }
+}

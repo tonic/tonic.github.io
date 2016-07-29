@@ -1,6 +1,6 @@
 .values {
   background: $white;
-  padding: 80px 30px 70px 30px;
+  padding: 62px 30px 98px 30px;
 
   .flex-wrap {
     margin: 0 30px;
@@ -12,10 +12,6 @@
     padding: 0 180px 5px 70px;
 
     h2 {
-      background: url(/images/triple-slash.png) 0 0 no-repeat;
-      background-size: 39px 50px;
-      padding-left: 45px;
-
       strong {
         color: $mulberry;
       }
@@ -42,3 +38,26 @@
     }
   }
 }//.values
+
+//481px to 768px
+@media (max-width: $screen-sm) {
+  .values {
+    padding: 42px 30px 68px 30px;
+
+    .value-intro {
+      padding: 0 30px 5px 30px;
+
+      h2 {
+        font-size: 34px;
+      }
+    }
+
+    .flex-wrap {
+      flex-direction: column;
+    }
+
+    .value {
+      padding: 0;
+    }
+  }
+}
