@@ -1,4 +1,5 @@
 var config = require('../config');
+var file = require('gulp-file');
 var ghPages = require('gulp-gh-pages');
 var gulp = require('gulp');
 var open = require('open');
@@ -7,6 +8,7 @@ var package = require('../../package.json');
 var path = require('path');
 
 var settings = {
+  cname: 'hellotonic.com',
   url: package.homepage,
   src: path.join(config.root.dest, '/**/*'),
   ghPages: {
@@ -17,6 +19,7 @@ var settings = {
 
 var deployTask = function () {
   return gulp.src(settings.src)
+    .pipe(file('CNAME', settings.cname))
     .pipe(ghPages(settings.ghPages))
     .on('end', function () {
       open(settings.url);
