@@ -118,14 +118,22 @@
   .contact {
     .address-holder {
       width: 100%;
-      padding-top: 50px;
-      padding-bottom: 0;
+      padding: 50px 45px 0 45px;
     }
 
     .form-holder {
       width: 100%;
+
       h4 {
         margin-top: 0;
+      }
+
+
+      .control {
+        input,
+        textarea {
+          width: 92%;
+        }
       }
     }
 

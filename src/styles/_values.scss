@@ -61,3 +61,12 @@
     }
   }
 }
+
+//480px and Less
+@media (max-width: $screen-xs) {
+  .values {
+    .value h3 {
+      font-size: 26px;
+    }
+  }
+}

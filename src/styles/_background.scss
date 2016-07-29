@@ -107,8 +107,15 @@
 
     .about {
       width: 100%;
-      padding: 0 20px;
+      padding: 30px 20px;
       font-size: 20px;
+    }
+
+    .alt {
+      .bg-hold,
+      .about {
+        height: 375px;
+      }
     }
 
     h3 {
