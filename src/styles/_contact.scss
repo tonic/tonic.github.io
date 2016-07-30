@@ -48,6 +48,11 @@
   .form-holder {
     padding: 15px 25px 45px 45px;
 
+    .message {
+      color: #fff;
+      font-size: 18px;
+    }
+
     h4 {
       margin-top: 45px;
       color: $gray-light;
@@ -69,6 +74,10 @@
         color: $gray;
         font-size: 17px;
         font-weight: normal;
+      }
+
+      .required {
+        color: #a94442;
       }
 
       input,
