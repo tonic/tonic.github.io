@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const LeadsAPI = {
   create(params) {
-    return axios.post('http://leads.tonic.io/api/leads', params);
+    return axios.post(__API__ + 'api/leads', params);
   }
 };
 

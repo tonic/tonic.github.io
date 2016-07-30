@@ -43,6 +43,12 @@ module.exports = function (env) {
   if (env === 'development') {
     webpackConfig.devtool = 'inline-source-map';
 
+    webpackConfig.plugins.push(
+      new webpack.DefinePlugin({
+        '__API__': JSON.stringify('http://localhost:3000/')
+      })
+    );
+
     // Create new entries object with webpack-hot-middleware added
     for (var key in config.tasks.js.entries) {
       var entry = config.tasks.js.entries[key];
@@ -83,6 +89,9 @@ module.exports = function (env) {
         'process.env': {
           'NODE_ENV': JSON.stringify('production')
         }
+      }),
+      new webpack.DefinePlugin({
+        '__API__': JSON.stringify('http://leads.tonic.io/')
       }),
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin(),
