@@ -51,7 +51,7 @@
 
     h2 {
       padding-right: 0;
-      font-size: 40px;
+      font-size: 36px;
     }
 
     p {
@@ -80,6 +80,8 @@
 //480px and Less
 @media (max-width: $screen-xs) {
   .intro {
+    padding: 30px 35px 40px 35px;
+
     h2 {
       font-size: 28px;
     }
