@@ -28,7 +28,9 @@ const ContactForm = React.createClass({
     this.setState(newState);
   },
 
-  onSubmit() {
+  onSubmit(e) {
+    e.preventDefault();
+
     this.setState({
       isSubmitting: true
     });
