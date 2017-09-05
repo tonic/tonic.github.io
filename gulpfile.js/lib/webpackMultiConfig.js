@@ -91,7 +91,7 @@ module.exports = function (env) {
         }
       }),
       new webpack.DefinePlugin({
-        '__API__': JSON.stringify('http://leads.tonic.io/')
+        '__API__': JSON.stringify('https://leads.tonic.io/')
       }),
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin(),
