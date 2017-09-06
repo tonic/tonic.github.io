@@ -5,7 +5,6 @@ branches:
 install:
 - cmd: appveyor-retry npm install
 - cmd: git config --global credential.helper store
-- cmd: git config --global credential.helper store
 - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
 - cmd: git config --global user.email "kevin@hellotonic.com"
 - cmd: git config --global user.name "Deploy Bot"
