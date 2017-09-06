@@ -2,6 +2,8 @@
 
 Tonic is a digital agency that's good for business.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/35feff75eocjwm7x/branch/develop?svg=true)](https://ci.appveyor.com/project/TomFulton85489/tonic-github-io/branch/develop)
+
 ## Installation
 
 Clone:
