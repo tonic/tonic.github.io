@@ -1,0 +1,17 @@
+version: 1.0.{build}
+branches:
+  only:
+  - develop
+install:
+- cmd: >-
+    appveyor-retry npm install
+build_script:
+- cmd: npm run deploy
+environment:
+  access_token:
+    secure: gZzyBZAyWnL/SWk510yUo6TWqJPS3irtr/JtrzhM0z9fDscuqNSizPLW+nh+KekO
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "kevin@hellotonic.com"
+  - git config --global user.name "Deploy Bot"
