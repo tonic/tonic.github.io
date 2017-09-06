@@ -41,6 +41,7 @@
   },
   "scripts": {
     "start": "gulp",
+    "build": "gulp production",
     "deploy": "gulp deploy"
   }
 }
