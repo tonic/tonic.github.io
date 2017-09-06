@@ -3,16 +3,15 @@ branches:
   only:
   - develop
 install:
-- cmd: >-
-    appveyor-retry npm install
+- cmd: appveyor-retry npm install
+- cmd: git config --global credential.helper store
+- cmd: git config --global credential.helper store
+- ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+- cmd: git config --global user.email "kevin@hellotonic.com"
+- cmd: git config --global user.name "Deploy Bot"
 build_script:
-- cmd: >-
-    npm build deploy
-    git config --global credential.helper store
-    git config --global credential.helper store
-    ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-    git config --global user.email "kevin@hellotonic.com"
-    git config --global user.name "Deploy Bot"
+- cmd: npm run deploy
+
 environment:
   access_token:
     secure: gZzyBZAyWnL/SWk510yUo6TWqJPS3irtr/JtrzhM0z9fDscuqNSizPLW+nh+KekO
