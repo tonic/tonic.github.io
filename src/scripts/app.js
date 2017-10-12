@@ -19,7 +19,7 @@ var tonicService = (function(){
     }
     
     function setCopyrightYear() {
-        var $copyright = $("js-copyright-year");
+        var $copyright = $("#js-copyright-year");
 
         $copyright.html(getCurrentYear());
     }
