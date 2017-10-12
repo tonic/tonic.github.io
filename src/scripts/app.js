@@ -11,3 +11,26 @@ ReactDOM.render(
   <ContactForm />,
   document.getElementById('contact-form')
 );
+
+var tonicService = (function(){
+    
+    function getCurrentYear() {
+        return (new Date()).getFullYear();
+    }
+    
+    function setCopyrightYear() {
+        document.getElementById("js-copyright-year").innerHTML = getCurrentYear();
+    }
+    
+    function init() {
+        document.addEventListener("DOMContentLoaded", function(event) { 
+          setCopyrightYear();
+        });
+    }
+    
+    return {
+        init: init
+    }
+})();
+
+tonicService.Init();
