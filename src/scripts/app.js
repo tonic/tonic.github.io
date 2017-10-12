@@ -35,4 +35,4 @@ var tonicService = (function(){
     }
 })();
 
-tonicService.Init();
+tonicService.init();
