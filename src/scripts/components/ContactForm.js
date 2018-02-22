@@ -8,7 +8,6 @@ const ContactForm = React.createClass({
       message: 'Get in Touch',
       subMessage: '',
       isSubmitting: false,
-      submitted: false,
       lead: {
         name: '',
         email: '',
@@ -38,10 +37,9 @@ const ContactForm = React.createClass({
     LeadsAPI.create(this.state.lead)
       .then((response) => {
         this.setState({
-          message: 'Thanks for getting in touch!',
-          subMessage: 'We\'ll get back to you as soon as we can.',
+          alertState: 'success',
+          subMessage: 'Got it! We\'ll get back to you as soon as we can. \uD83D\uDC4D',
           isSubmitting: false,
-          submitted: true,
           lead: {
             name: '',
             email: '',
@@ -52,7 +50,8 @@ const ContactForm = React.createClass({
       })
       .catch((error) => {
         this.setState({
-          alert: 'Something broke',
+          alertState: 'danger',
+          subMessage: '\uD83E\uDD14 Looks like something went wrong. Please try again.',
           isSubmitting: false
         });
       });
@@ -68,69 +67,79 @@ const ContactForm = React.createClass({
 
   renderMessage() {
     return (
-      <h4>{this.state.message} <span>{this.state.subMessage}</span></h4>
+      <h4>{this.state.message} </h4>
     );
   },
 
   renderForm() {
-    if (!this.state.submitted) {
+    return (
+      <form action="#" className="form-contact">
+        <div className="control">
+          <input
+            id="form_name"
+            name="name"
+            onChange={this.handleChange}
+            placeholder="Your Name"
+            type="text"
+            value={this.state.lead.name}
+          />
+        </div>
+
+        <div className="control">
+          <input
+            id="form_email"
+            name="email"
+            onChange={this.handleChange}
+            placeholder="Your Email"
+            type="text"
+            value={this.state.lead.email}
+          />
+        </div>
+
+        <div className="control">
+          <input
+            id="form_phone"
+            name="phone"
+            onChange={this.handleChange}
+            placeholder="Your Phone Number"
+            type="text"
+            value={this.state.lead.phone}
+          />
+        </div>
+
+        <div className="control">
+          <textarea
+            id="form_comments"
+            name="message"
+            onChange={this.handleChange}
+            placeholder="What are you looking to do?"
+            rows="7"
+            type="text"
+            value={this.state.lead.message}
+          />
+        </div>
+
+        <div className="control">
+          <button
+            className="btn"
+            disabled={!this.isValid() || this.state.isSubmitting}
+            onClick={this.onSubmit}
+            type="submit">
+            {this.state.isSubmitting ? 'Submitting\u2026' : 'Submit'}
+          </button>
+        </div>
+      </form>
+    );
+  },
+
+  renderSubMessage() {
+    if (this.state.subMessage !== '') {
+      const { alertState } = this.state;
+
       return (
-        <form action="#" className="form-contact">
-          <div className="control">
-            <input
-              id="form_name"
-              name="name"
-              onChange={this.handleChange}
-              placeholder="Your Name"
-              type="text"
-              value={this.state.lead.name}
-            />
-          </div>
-
-          <div className="control">
-            <input
-              id="form_email"
-              name="email"
-              onChange={this.handleChange}
-              placeholder="Your Email"
-              type="text"
-              value={this.state.lead.email}
-            />
-          </div>
-
-          <div className="control">
-            <input
-              id="form_phone"
-              name="phone"
-              onChange={this.handleChange}
-              placeholder="Your Phone Number"
-              type="text"
-              value={this.state.lead.phone}
-            />
-          </div>
-
-          <div className="control">
-            <textarea
-              id="form_comments"
-              name="message"
-              onChange={this.handleChange}
-              placeholder="What are you looking to do?"
-              rows="7"
-              type="text"
-              value={this.state.lead.message}
-            />
-          </div>
-
-          <div className="control">
-            <button
-              className="btn"
-              disabled={!this.isValid() || this.state.isSubmitting}
-              onClick={this.onSubmit}
-              type="submit">
-              Submit
-            </button>
-          </div>
-        </form>
+        <div className={`alert alert-${alertState}`}>
+          {this.state.subMessage}
+        </div>
       );
     }
   },
@@ -139,6 +148,7 @@ const ContactForm = React.createClass({
     return (
       <div>
         {this.renderMessage()}
+        {this.renderSubMessage()}
         {this.renderForm()}
       </div>
     );
