@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ContactForm from './components/ContactForm';
@@ -11,27 +10,3 @@ ReactDOM.render(
   <ContactForm />,
   document.getElementById('contact-form')
 );
-
-var tonicService = (function(){
-  function getCurrentYear() {
-    return (new Date()).getFullYear();
-  }
-
-  function setCopyrightYear() {
-    var $copyright = $("#js-copyright-year");
-
-    $copyright.html(getCurrentYear());
-  }
-
-  function init() {
-    document.addEventListener("DOMContentLoaded", function(event) {
-      setCopyrightYear();
-    });
-  }
-
-  return {
-    init: init
-  }
-})();
-
-tonicService.init();

@@ -10,8 +10,7 @@ install:
 - cmd: git config --global user.name "Deploy Bot"
 build_script:
 - cmd: npm run deploy
-
+test: off
 environment:
   access_token:
     secure: gZzyBZAyWnL/SWk510yUo6TWqJPS3irtr/JtrzhM0z9fDscuqNSizPLW+nh+KekO
-
