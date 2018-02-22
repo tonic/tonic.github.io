@@ -1,9 +1,12 @@
 @import 'variables';
-@import 'bootstrap';
-@import 'animations';
-@import 'mixins';
+@import 'reset';
+@import 'base';
+@import 'fonts';
+@import 'grid';
+@import 'buttons';
 @import 'hero';
 @import 'intro';
-@import 'background';
+@import 'collage';
 @import 'contact';
+@import 'footer';
 @import 'values';

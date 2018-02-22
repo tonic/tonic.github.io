@@ -5,7 +5,7 @@ var path = require('path');
 var config = require('../config');
 
 var paths = {
-  src: path.join(config.root.src, config.tasks.static.src, '/**/*.{' + config.tasks.static.extensions + '}'),
+  src: path.join(config.root.src, config.tasks.static.src, '/**/*.*'),
   dest: path.join(config.root.dest)
 };
 

@@ -4,12 +4,14 @@ const initMap = () => {
   const mapOptions = {
     zoom: 14,
     center: new google.maps.LatLng(39.751263, -104.999771),
-    scrollwheel: false,
     navigationControl: true,
     mapTypeControl: false,
     scaleControl: false,
-    draggable: true,
     disableDefaultUI: true,
+    draggable: false,
+    zoomControl: false,
+    scrollwheel: false,
+    disableDoubleClickZoom: true,
     styles: styles
   };
 

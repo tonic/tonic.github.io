@@ -13,26 +13,25 @@ ReactDOM.render(
 );
 
 var tonicService = (function(){
-    
-    function getCurrentYear() {
-        return (new Date()).getFullYear();
-    }
-    
-    function setCopyrightYear() {
-        var $copyright = $("#js-copyright-year");
+  function getCurrentYear() {
+    return (new Date()).getFullYear();
+  }
 
-        $copyright.html(getCurrentYear());
-    }
-    
-    function init() {
-        document.addEventListener("DOMContentLoaded", function(event) { 
-          setCopyrightYear();
-        });
-    }
-    
-    return {
-        init: init
-    }
+  function setCopyrightYear() {
+    var $copyright = $("#js-copyright-year");
+
+    $copyright.html(getCurrentYear());
+  }
+
+  function init() {
+    document.addEventListener("DOMContentLoaded", function(event) {
+      setCopyrightYear();
+    });
+  }
+
+  return {
+    init: init
+  }
 })();
 
 tonicService.init();

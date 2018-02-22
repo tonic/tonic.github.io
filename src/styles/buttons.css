@@ -1,0 +1,37 @@
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-sans-serif);
+  margin: 0;
+}
+
+.btn {
+  display: block;
+  color: var(--color-white);
+  font-size: 16px;
+  border: 0;
+  background: var(--color-purple-light);
+  margin: 0;
+  padding: 20px;
+  text-decoration: none;
+  font-family: var(--font-sans-serif);
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover,
+.btn.disabled:hover {
+  background: var(--color-purple-light);
+}

@@ -5,8 +5,8 @@ import update from 'react-addons-update';
 const ContactForm = React.createClass({
   getInitialState() {
     return {
-      message: 'Thirsty?',
-      subMessage: 'Drop us a line.',
+      message: 'Get in Touch',
+      subMessage: '',
       isSubmitting: false,
       submitted: false,
       lead: {
@@ -75,47 +75,47 @@ const ContactForm = React.createClass({
   renderForm() {
     if (!this.state.submitted) {
       return (
-        <form action="#" id="contact">
+        <form action="#" className="form-contact">
           <div className="control">
-            <label htmlFor="form_name">Your Name <span className="required">*</span></label>
             <input
               id="form_name"
               name="name"
               onChange={this.handleChange}
+              placeholder="Your Name"
               type="text"
               value={this.state.lead.name}
             />
           </div>
 
           <div className="control">
-            <label htmlFor="form_email">Your Email <span className="required">*</span></label>
             <input
               id="form_email"
               name="email"
               onChange={this.handleChange}
+              placeholder="Your Email"
               type="text"
               value={this.state.lead.email}
             />
           </div>
 
           <div className="control">
-            <label htmlFor="form_phone">Your Phone #</label>
             <input
               id="form_phone"
               name="phone"
               onChange={this.handleChange}
+              placeholder="Your Phone Number"
               type="text"
               value={this.state.lead.phone}
             />
           </div>
 
           <div className="control">
-            <label htmlFor="form_comments">What are you looking to do? <span className="required">*</span></label>
             <textarea
               id="form_comments"
               name="message"
               onChange={this.handleChange}
-              rows="3"
+              placeholder="What are you looking to do?"
+              rows="7"
               type="text"
               value={this.state.lead.message}
             />
@@ -123,11 +123,11 @@ const ContactForm = React.createClass({
 
           <div className="control">
             <button
-              className="btn btn-hollow"
+              className="btn"
               disabled={!this.isValid() || this.state.isSubmitting}
               onClick={this.onSubmit}
               type="submit">
-              Get in Touch
+              Submit
             </button>
           </div>
         </form>
