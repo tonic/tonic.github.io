@@ -19,6 +19,7 @@
   --grid-container-max-width-md:  720px;
   --grid-container-max-width-sm:  540px;
   --grid-container-max-width-xl:  1140px;
+  --grid-section-max-width:       1600px;
   --grid-gutter-width:            30px;
 }
 
