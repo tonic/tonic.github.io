@@ -10,3 +10,13 @@ ReactDOM.render(
   <ContactForm />,
   document.getElementById('contact-form')
 );
+
+function contactFocus(e) {
+  if ('#contact' === window.location.hash) {
+    setTimeout(() => document.querySelector('#contact-form input[name="name"]').focus(), 100);
+  }
+}
+
+window.addEventListener('hashchange', contactFocus);
+window.addEventListener('load', contactFocus);
+document.querySelector('.values .btn').addEventListener('click', contactFocus);
