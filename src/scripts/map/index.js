@@ -19,7 +19,7 @@ const initMap = () => {
   const map = new google.maps.Map(mapElement, mapOptions);
 
   const marker = new google.maps.Marker({
-    position: new google.maps.LatLng(39.7578276, -105.0072071),
+    position: new google.maps.LatLng(39.7555539,-105.0022813),
     map: map,
     title: 'Tonic, Inc.',
     icon: {
