@@ -14,6 +14,8 @@ $ git clone git@github.com:tonic/tonic.github.io.git
 
 Install Dependencies:
 
+Note, node version 6.x required at the moment.  Some dependencies fail to build on anything newer.
+
 ```bash
 $ npm install
 ```
