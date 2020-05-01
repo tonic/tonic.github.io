@@ -93,10 +93,38 @@
   /* margin-bottom: 24px; */
 }
 
-.values .join {
+.best-workplaces {
+  margin-top:2rem;
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-workplaces .divider {
+  flex:8;
   border-top: 1px solid var(--color-purple-lighter);
+  margin:80px 0;
+}
+
+.best-workplaces .logo-bg {
+  position:absolute;
+  right:1rem;
+  background:white;
+  width:175px;
+  height:175px;
+}
+
+.best-workplaces .inc-logo {
+  flex:1;
+  background-image: url('/images/photos/inc-best-2020.png');
+  background-size: 100%;
+  width:160px;
+  height:160px;
+}
+
+.values .join {
   margin-top: 80px;
-  padding-top: 80px;
 }
 
 .values .join .photo {
@@ -112,6 +140,14 @@
   .values .photo, 
   .values .join .photo {
     margin-bottom: 50px;
+  }
+
+  .best-workplaces .divider {
+    border:none;
+  }
+
+  .best-workplaces .logo-bg {
+    right:auto;
   }
 
 }
