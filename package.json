@@ -28,7 +28,7 @@
     "gulp-watch": "^4.3.6",
     "json-loader": "^0.5.4",
     "lodash": "^4.13.1",
-    "open": "0.0.5",
+    "open": "6.0.0",
     "react": "^15.3.0",
     "react-addons-update": "^15.3.0",
     "react-dom": "^15.3.0",
