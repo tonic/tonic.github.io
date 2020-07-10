@@ -6,7 +6,7 @@
   "private": true,
   "homepage": "https://tonic.github.io/",
   "devDependencies": {
-    "axios": "^0.13.1",
+    "axios": "^0.18.1",
     "babel-core": "^6.11.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
