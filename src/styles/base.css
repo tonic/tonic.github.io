@@ -9,13 +9,17 @@ body {
 }
 
 a {
-  color: var(--color-purple-light);
+  color: var(--color-white);
   text-decoration: none;
 }
 
 a:hover {
   color: var(--color-purple-lighter);
   text-decoration: none;
+}
+
+i {
+  color: var(--color-white);
 }
 
 b,

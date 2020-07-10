@@ -72,6 +72,14 @@
   display: block;
 }
 
+.contact .details .row {
+  padding:0;
+}
+
+.contact .details .row .col-10 {
+  padding:0;
+}
+
 .contact .form-holder .form-holder-inner {
   position: relative;
   z-index: 20;
